@@ -1,0 +1,103 @@
+.add-card-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.add-card {
+  width: 420px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.04),
+    0 8px 24px rgba(0,0,0,0.10),
+    0 1px 0 #e0d8cc inset;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add-card-heading {
+  font-family: 'Lora', serif;
+  font-size: 1.35rem;
+  color: #2c2520;
+  text-align: center;
+}
+
+.add-card-label {
+  display: block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b5f54;
+  margin-bottom: 6px;
+}
+
+.add-card-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #2c2520;
+  background: #faf8f4;
+  border: 1.5px solid #b0a898;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.add-card-input:focus {
+  border-color: #2c2520;
+}
+
+.add-card-input::placeholder {
+  color: #b0a898;
+  font-style: italic;
+}
+
+.add-card-divider {
+  border: none;
+  border-top: 1px solid #e0d8cc;
+  margin: 4px 0;
+}
+
+.add-card-btn {
+  width: 100%;
+  background: none;
+  border: 1.5px solid #b0a898;
+  color: #6b5f54;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.add-card-btn:hover {
+  background: #2c2520;
+  color: #f5f0e8;
+  border-color: #2c2520;
+}
+
+.add-card-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.add-card-btn:disabled:hover {
+  background: none;
+  color: #6b5f54;
+  border-color: #b0a898;
+}
+
+.add-card-btn--cancel {
+  margin-top: 4px;
+}
