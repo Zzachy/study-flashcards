@@ -50,10 +50,15 @@ function Flashcards () {
     setNewCard(false);
   }
 
-  function handleEditCard(updatedCard) {
-    console.log(updatedCard)
+  function handleEditCard (updatedCard) {
     setCards(cards.map(c => c.id === updatedCard.id ? updatedCard : c));
     setEditingCard(null);
+  }
+
+  function handleDeleteCard (currentCard) {
+    const updated = cards.filter(c => c.id !== currentCard.id);
+    setCards(updated);
+    setCurrent(prev => Math.max(0, Math.min(prev, updated.length - 1)));
   }
 
   let card = cards[current];
@@ -69,6 +74,7 @@ function Flashcards () {
       />
     ) : (
       <>
+        <h1 className="header">My Flashcard App</h1>
         <div className="bottom-row">
           <button className="add-card-trigger" onClick={handleNewCard}>Add Card</button>
         </div>
@@ -89,7 +95,10 @@ function Flashcards () {
               <button className="nav-btn" onClick={handlePrev}>‹</button>
               <button className="nav-btn" onClick={handleNext}>›</button>
             </div>
-            <button className="flip-btn" onClick={() => setEditingCard(card)}>Edit card</button>
+            <div className="card-actions">
+              <button className="flip-btn" onClick={() => setEditingCard(card)}>Edit card</button>
+              <button className="flip-btn" onClick={() => handleDeleteCard(card)}>Delete card</button>
+            </div>
           </>
         )}
       </>

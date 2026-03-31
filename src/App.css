@@ -18,6 +18,15 @@ body {
   align-items: center;
 }
 
+.header {
+  font-family: 'Lora', serif;
+  font-size: 1.9rem;
+  line-height: 1.65;
+  color: #2c2520;
+  text-align: center;
+  word-break: break-word;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -157,4 +166,10 @@ body {
   line-height: 1.65;
   color: #a0948a;
   text-align: center;
+}
+
+.card-actions {
+  width: 420px;
+  display: flex;
+  gap: 12px;
 }
